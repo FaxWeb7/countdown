@@ -1,0 +1,27 @@
+.footer {
+  &__inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__text {
+    font-weight: 600;
+  }
+  &__author {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+  }
+  &__link {
+    color: var(--blue-color);
+  }
+  @media (max-width: 400px) {
+    &__text {
+      font-size: 15px;
+    }
+    &__link {
+      font-size: 15px;
+    }
+  }
+}

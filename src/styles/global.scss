@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import './reset';
+
+@font-face {
+  font-family: 'clock';
+  src: url('better-vcr5.1.ttf');
+  font-display: swap;
+}
+
+:root {
+  --gray-color: #333333;
+  --white-color: #ffffff;
+  --blue-color: #1088f2;
+  --light-blue-color: #0dc7f2;
+  --red-color: #ff4b5b;
+}
+
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--white-color);
+
+  height: 100%;
+  background-color: var(--gray-color);
+  overflow-x: hidden;
+  min-width: 320px;
+  &.locked {
+    overflow: hidden;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  @media screen and (-webkit-min-device-pixel-ratio: 0) and (max-width: 700px) {
+    min-height: 90vh;
+  }
+}
+.header {
+  flex: 0 0 auto;
+}
+.main {
+  flex: 1 0 auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 25px 30px;
+  @media (max-width: 576px) {
+    padding: 20px 15px;
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  select:focus,
+  textarea:focus,
+  input:focus {
+    font-size: 16px;
+  }
+}
