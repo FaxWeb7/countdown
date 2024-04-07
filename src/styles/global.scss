@@ -35,15 +35,16 @@ body {
   &.locked {
     overflow: hidden;
   }
+  #root {
+    height: 100%;
+  }
 }
 
 .wrapper {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  @media screen and (-webkit-min-device-pixel-ratio: 0) and (max-width: 700px) {
-    min-height: 90vh;
-  }
+  justify-content: space-between;
+  height: 100%;
 }
 .header {
   flex: 0 0 auto;
